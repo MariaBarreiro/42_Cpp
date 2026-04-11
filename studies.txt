@@ -21,7 +21,28 @@ Operators:
  -> % modulus (division remainder)
  -> ++ increment
  -> -- decrement
- -> = 
+ -> = assignment
+ -> += add and assign
+ -> -= subtract and assign
+ -> *= multiply and assign
+ -> /= divide and assign
+ -> %= modulus and assign
+ -> &= bitwise AND (keeps bits that are 1 in both numbers)
+ -> |= bitwise OR (keeps bits that are 1 in either number)
+ -> ^= bitwise XOR (keeps bits that are different)
+ -> >>= right shift and assign (moves bits right by x places)
+ -> <<= left shift and assign (moves bites left by x places)
+ -> == equal to
+ -> != not equal to
+ -> > greater than
+ -> < less than
+ -> >= greater than or equal to
+ -> <= less than or equal to
+ -> && and
+ -> || or
+ -> ! not
+
+priorities in operators: () -> *, /, % -> =, - -> >, <, >=, <= -> ==, != -> && -> || -> =
 
 
 

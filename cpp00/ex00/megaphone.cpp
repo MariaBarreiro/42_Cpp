@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <cctype>
 #include <iostream>
 #include <string>
 
@@ -17,14 +18,17 @@ int	main(int ac, char **av)
 {
 	if (ac == 1)
 	{
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" >> std::endl;
+		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
 		return (0);
 	}
 	for (int i = 1; i < ac; i++)
 	{
 		std::string argv = av[i];
-		for (j = 0; j < argv.length())
+		for (unsigned long j = 0; j < argv.length(); j++)
+			argv[j] = std::toupper(argv[j]);
+		std::cout << argv;
 	}
+	std::cout << std::endl;
 
 	return (0);
 }
