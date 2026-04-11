@@ -1,0 +1,34 @@
+C++ is case sensitive.
+As in C, every statement should end with the semicolon.
+The statements are executed sequentially.
+#include <iostream> it's a header file library that lets you input and output objects.
+To create a new line you can either use \n just like in C or use the std::endl. 
+To add a comment you just type // before the text you want commented. If you want to comment more than one line, just do it like C with /* ... */
+Just like C, there's different types of variables:
+ -> int stores integers (whole numbers). Its size is 2 or 4 bytes;
+ -> double stores floating point numbers with decimals until 15 digits. Its size is 8 bytes;
+ -> float stores floating point numbers with decimals just like doubles, but until 6-7 digits only. Its size is 4 bytes
+ -> char stores single characters and are surrounded with SINGLE quotes. Its size is 1 byte;
+ -> string stores text and are surrounded with DOUBLE quotes;
+ -> bool stores values with two states, either true or false. Its size is 1 byte;
+We are able to declare several variables of the same type just like int x = 5, y = 6, etc.; or if I want all the variables to have the same value I can just do x = y = 5;
+Just like C, we have constants. When I don't want other to change existing variable values, I just need to put const before the variable type when I create it.
+Operators:
+ -> + sum
+ -> - substraction
+ -> * multiplication
+ -> / division
+ -> % modulus (division remainder)
+ -> ++ increment
+ -> -- decrement
+ -> = 
+
+
+
+order of studying:
+- basic syntax
+- how the output function
+- how to comment something
+- type of variables
+- user input
+
