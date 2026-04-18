@@ -39,9 +39,38 @@ void PhoneBook::addContact() {
   this->contactsCount++;
 }
 
+std::string truncate(std::string str) {
+  if (str.length() > 10)
+    return (str.substr(0, 9) + ".");
+  return (str);
+}
+
 void PhoneBook::searchContact() {
+  std::string chosenIndex;
   if (this->contactsCount == 0) {
     std::cout << "No contacts available." << std::endl;
     return;
   }
+  for (int i = 0; i < 8; i++) {
+    if (i < this->contactsCount) {
+      std::cout << std::setw(10) << i << "|";
+      std::cout << std::setw(10) << truncate(this->contacts[i].getFirstName())
+                << "|";
+      std::cout << std::setw(10) << truncate(this->contacts[i].getLastName())
+                << "|";
+      std::cout << std::setw(10) << truncate(this->contacts[i].getNickname())
+                << std::endl;
+    }
+  }
+  std::cout << "Enter the index of the contact you're searching: ";
+  std::getline(std::cin, chosenIndex);
+  if (chosenIndex[0] >= '0' && chosenIndex[0] <= '7' &&
+      chosenIndex[0] - '0' < this->contactsCount && chosenIndex.length() == 1) {
+    int x = chosenIndex[0] - '0';
+    std::cout << "First name: " << this->contacts[x].getFirstName()
+              << std::endl;
+    std::cout << "Last name: " << this->contacts[x].getLastName() << std::endl;
+    std::cout << "Nickname: " << this->contacts[x].getNickname() << std::endl;
+  } else
+    std::cout << "Invalid index." << std::endl;
 }

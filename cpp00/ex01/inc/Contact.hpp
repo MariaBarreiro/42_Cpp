@@ -20,6 +20,10 @@ public:
   void setNickname(std::string nickname);
   void setPhoneNumber(std::string phoneNumber);
   void setDarkestSecret(std::string darkestSecret);
+
+	std::string	getFirstName();
+	std::string	getLastName();
+	std::string	getNickname();
 };
 
 #endif

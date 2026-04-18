@@ -19,6 +19,7 @@ int main(int ac, char **av) {
         }
       } else if (inputCmd == "EXIT") {
         std::cout << "Exiting PhoneBook." << std::endl;
+        break;
       } else if (inputCmd == "ADD") {
         std::cout << "Adding contact." << std::endl;
         phonebook.addContact();
