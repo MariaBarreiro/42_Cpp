@@ -13,13 +13,13 @@ private:
 
 public:
   Contact();
-	~Contact();
+  ~Contact();
 
-	void	setFirstName(std::string	firstName);
-	void	setLastName(std::string	lastName);
-	void	setNickname(std::string nickname);
-	void	setPhoneNumber(std::string phoneNumber);
-	void	setDarkestSecret(std::string darkestSecret);
+  void setFirstName(std::string firstName);
+  void setLastName(std::string lastName);
+  void setNickname(std::string nickname);
+  void setPhoneNumber(std::string phoneNumber);
+  void setDarkestSecret(std::string darkestSecret);
 };
 
 #endif

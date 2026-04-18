@@ -1,8 +1,20 @@
-#ifndef	PHONEBOOK_HPP
-#define	PHONEBOOK_HPP
+#ifndef PHONEBOOK_HPP
+#define PHONEBOOK_HPP
 
-class	PhoneBook{
-	
+#include "Contact.hpp"
+#include <iostream>
+#include <string>
+
+class PhoneBook {
+private:
+  Contact contacts[8];
+  int contactsCount;
+
+public:
+  PhoneBook();
+  ~PhoneBook();
+  void addContact();
+  void searchContact();
 };
 
 #endif
