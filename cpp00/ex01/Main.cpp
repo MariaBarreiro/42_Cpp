@@ -1,5 +1,13 @@
 #include "inc/PhoneBook.hpp"
 
+void	bannerPrinter() {
+std::cout << LPINK;
+std::cout << "=====================================\n";
+std::cout << "             PHONEBOOK               \n";
+std::cout << "=====================================\n";
+std::cout << RES;
+}
+
 int main(int ac, char **av) {
   (void)av;
   std::string inputCmd;
@@ -10,6 +18,7 @@ int main(int ac, char **av) {
     return (1);
   } else {
     while (1) {
+	bannerPrinter();
       std::cout << PINK "Available commands: ADD, SEARCH, EXIT." RES << std::endl;
       std::cout << PINK "Enter command: " RES;
       if (!std::getline(std::cin, inputCmd)) {
