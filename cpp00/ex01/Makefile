@@ -15,7 +15,7 @@ MKDIR			= mkdir -p
 ECHO			= echo
 INC     			        = -I$(INC_PATH)
 
-BLUE			= \033[38;2;59;57;93m
+BLUE			= \033[38;2;78;76;118m
 PURPLE		= \033[38;2;144;133;188m
 LPINK			= \033[38;2;242;203;224m
 PINK			= \033[38;2;203;109;154m

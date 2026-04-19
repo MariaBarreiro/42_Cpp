@@ -26,7 +26,7 @@ void PhoneBook::addContact() {
 
   if (firstName.empty() || lastName.empty() || nickname.empty() ||
       phoneNumber.empty() || darkestSecret.empty()) {
-    std::cout << "All fields must be filled." << std::endl;
+    std::cout << DPINK "All fields must be filled." RES << std::endl;
     return;
   }
 
@@ -48,10 +48,16 @@ std::string truncate(std::string str) {
 void PhoneBook::searchContact() {
   std::string chosenIndex;
   if (this->contactsCount == 0) {
-    std::cout << "No contacts available." << std::endl;
+    std::cout << DPINK "No contacts available." RES << std::endl;
     return;
   }
   for (int i = 0; i < 8; i++) {
+	if (i == 0) {
+		std::cout << std::setw(10) << "Index" << "|";
+		std::cout << std::setw(10) << "First name" << "|";
+		std::cout << std::setw(10) << "Last name" << "|";
+		std::cout << std::setw(10) << "Nickname" << std::endl;
+	}
     if (i < this->contactsCount) {
       std::cout << std::setw(10) << i << "|";
       std::cout << std::setw(10) << truncate(this->contacts[i].getFirstName())
@@ -62,7 +68,7 @@ void PhoneBook::searchContact() {
                 << std::endl;
     }
   }
-  std::cout << "Enter the index of the contact you're searching: ";
+  std::cout << BLUE "Enter the index of the contact you're searching: " RES;
   std::getline(std::cin, chosenIndex);
   if (chosenIndex[0] >= '0' && chosenIndex[0] <= '7' &&
       chosenIndex[0] - '0' < this->contactsCount && chosenIndex.length() == 1) {
@@ -72,5 +78,5 @@ void PhoneBook::searchContact() {
     std::cout << "Last name: " << this->contacts[x].getLastName() << std::endl;
     std::cout << "Nickname: " << this->contacts[x].getNickname() << std::endl;
   } else
-    std::cout << "Invalid index." << std::endl;
+    std::cout << DPINK "Invalid index." RES << std::endl;
 }
