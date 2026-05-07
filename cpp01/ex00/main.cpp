@@ -11,8 +11,11 @@ int main(int ac, char **av) {
   }
   std::cout << "Enter name of the zombie: ";
   std::getline(std::cin, zombieName);
-  zombie = new Zombie(zombieName);
+  zombie->newZombie(zombieName);
   if (!zombie) {
-    std::cout << "Error creating zombie." << std::endl
+    std::cout << "Error creating zombie." << std::endl;
   }
+  randomChump(zombieName);
+  delete zombie;
+  return (0);
 }
