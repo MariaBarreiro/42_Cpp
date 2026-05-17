@@ -1,11 +1,10 @@
-NAME			= Zombie
+NAME			= ZombieHorde
 
 INC_PATH	= ./inc/
 
 SRC				= main.cpp
 SRC				+= Zombie.cpp
-SRC				+= newZombie.cpp
-SRC				+= randomChump.cpp
+SRC				+= zombieHorde.cpp
 
 OBJS_DIR	= obj
 OBJS			= $(addprefix $(OBJS_DIR)/,$(SRC:.cpp=.o))
