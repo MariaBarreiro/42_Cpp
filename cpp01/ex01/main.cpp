@@ -15,7 +15,7 @@ int main(int ac, char **av) {
     std::cin >> zombieCount;
     if (zombieCount <= 0 || zombieCount > 100 || std::cin.fail()) {
       std::cin.clear();
-     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+      std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
       std::cout << "Invalid number. Try again!" << std::endl;
     } else
       break;
