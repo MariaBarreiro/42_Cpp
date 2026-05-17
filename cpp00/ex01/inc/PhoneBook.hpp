@@ -9,7 +9,7 @@
 class PhoneBook {
 private:
   Contact contacts[8];
-  int contactsCount;
+  int _contactsCount;
 
 public:
   PhoneBook();

@@ -1,12 +1,12 @@
 #include "inc/PhoneBook.hpp"
 #include <string>
 
-PhoneBook::PhoneBook() { this->contactsCount = 0; }
+PhoneBook::PhoneBook() { this->_contactsCount = 0; }
 
 PhoneBook::~PhoneBook() {}
 
 void PhoneBook::addContact() {
-  int position = this->contactsCount % 8;
+  int position = this->_contactsCount % 8;
   std::string firstName;
   std::string lastName;
   std::string nickname;
@@ -36,7 +36,7 @@ void PhoneBook::addContact() {
   this->contacts[position].setPhoneNumber(phoneNumber);
   this->contacts[position].setDarkestSecret(darkestSecret);
 
-  this->contactsCount++;
+  this->_contactsCount++;
 }
 
 std::string truncate(std::string str) {
@@ -47,7 +47,7 @@ std::string truncate(std::string str) {
 
 void PhoneBook::searchContact() {
   std::string chosenIndex;
-  if (this->contactsCount == 0) {
+  if (this->_contactsCount == 0) {
     std::cout << DPINK "No contacts available." RES << std::endl;
     return;
   }
@@ -58,7 +58,7 @@ void PhoneBook::searchContact() {
 		std::cout << std::setw(10) << "Last name" << "|";
 		std::cout << std::setw(10) << "Nickname" << std::endl;
 	}
-    if (i < this->contactsCount) {
+    if (i < this->_contactsCount) {
       std::cout << std::setw(10) << i << "|";
       std::cout << std::setw(10) << truncate(this->contacts[i].getFirstName())
                 << "|";
@@ -71,7 +71,7 @@ void PhoneBook::searchContact() {
   std::cout << BLUE "Enter the index of the contact you're searching: " RES;
   std::getline(std::cin, chosenIndex);
   if (chosenIndex[0] >= '0' && chosenIndex[0] <= '7' &&
-      chosenIndex[0] - '0' < this->contactsCount && chosenIndex.length() == 1) {
+      chosenIndex[0] - '0' < this->_contactsCount && chosenIndex.length() == 1) {
     int x = chosenIndex[0] - '0';
     std::cout << "First name: " << this->contacts[x].getFirstName()
               << std::endl;
