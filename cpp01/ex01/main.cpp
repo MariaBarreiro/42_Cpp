@@ -6,26 +6,26 @@ int main(int ac, char **av) {
   int zombieCount = 0;
 
   if (ac != 1) {
-    std::cout << "Correct usage: ./ZombieHorde" << std::endl;
+    std::cout << BLUE "Correct usage: ./ZombieHorde" RES << std::endl;
     return (1);
   }
 
   while (!std::cin.eof()) {
-    std::cout << "Enter number of zombies for the horde (between 0 and 100): ";
+    std::cout << PURPLE "Enter number of zombies for the horde (between 0 and 100): " RES;
     std::cin >> zombieCount;
     if (zombieCount <= 0 || zombieCount > 100 || std::cin.fail()) {
       std::cin.clear();
       std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-      std::cout << "Invalid number. Try again!" << std::endl;
+      std::cout << BLUE "Invalid number. Try again!" RES << std::endl;
     } else
       break;
   }
   std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-  std::cout << "Enter name of the zombies: ";
+  std::cout << LPINK "Enter name of the zombies: " RES;
   std::getline(std::cin, zombiesName);
   Zombie *horde = zombieHorde(zombieCount, zombiesName);
   if (!horde) {
-    std::cout << "Memory allocation error, no horde created!" << std::endl;
+    std::cout << BLUE "Memory allocation error, no horde created!" RES << std::endl;
     return (1);
   }
 

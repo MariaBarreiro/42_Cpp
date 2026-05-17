@@ -2,7 +2,7 @@
 Zombie *zombieHorde(int N, std::string name) {
   Zombie *horde = new Zombie[N];
   if (!horde) {
-    std::cout << "Error creating Zombie!" << std::endl;
+    std::cout << BLUE "Error creating Zombie!" RES << std::endl;
     return (NULL);
   }
   for (int i = 0; i < N; i++)
