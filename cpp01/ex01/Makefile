@@ -9,7 +9,7 @@ SRC				+= zombieHorde.cpp
 OBJS_DIR	= obj
 OBJS			= $(addprefix $(OBJS_DIR)/,$(SRC:.cpp=.o))
 
-CC				= c++ -Wall -Wextra -Werror -std=c++98
+CC				= c++ -Wall -Wextra -Werror -std=c++98 -g
 RM				= rm -rf
 MKDIR			= mkdir -p
 ECHO			= echo
