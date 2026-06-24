@@ -1,17 +1,22 @@
 #include "HumanA.hpp"
 #include "HumanB.hpp"
 
-int	main(int ac, char **av)
-{
-	(void)av;
-	std::strin 
-
-	if (ac != 1)
-	{
-		    std::cout << BLUE "Correct usage: ./Weapon" RES << std::endl;
-		    return (1);
-	}
-	std::cout << LPINK "Enter name of HumanA: " RES;
-	std::getline(std::cin, )
-	
+int main() {
+  {
+    Weapon club = Weapon("crude spiked club");
+    HumanA bob("Bob", club);
+    bob.attack();
+    club.setType("some other type of club");
+    bob.attack();
+  }
+  {
+    Weapon club = Weapon("crude spiked club");
+    HumanB jim("Jim");
+//	jim.attack();
+    jim.setWeapon(club);
+    jim.attack();
+    club.setType("some other type of club");
+    jim.attack();
+  }
+  return 0;
 }
