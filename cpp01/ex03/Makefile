@@ -5,6 +5,8 @@ SRC				+= Weapon.cpp
 SRC				+= HumanB.cpp
 SRC				+= HumanA.cpp
 
+INC_PATH	= ./inc/
+
 OBJS_DIR	= obj
 OBJS			= $(addprefix $(OBJS_DIR)/,$(SRC:.cpp=.o))
 
@@ -24,7 +26,7 @@ RESET   = \033[0m
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	@$(CC) $(OBJS) -o $(NAME)
+	@$(CC) $(INC) $(OBJS) -o $(NAME)
 	@$(ECHO) "$(BLUE)Compilation completed$(RESET)"
 
 

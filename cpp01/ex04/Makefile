@@ -1,14 +1,14 @@
-NAME			= Weapon
+NAME			= Sed
 
 SRC				= main.cpp
-SRC				+= Weapon.cpp
-SRC				+= HumanB.cpp
-SRC				+= HumanA.cpp
+SRC				+= Sed.cpp
+
+INC_PATH = ./inc/
 
 OBJS_DIR	= obj
 OBJS			= $(addprefix $(OBJS_DIR)/,$(SRC:.cpp=.o))
 
-CC				= c++ -Wall -Wextra -Werror -std=c++98
+CC				= c++ -Wall -Wextra -Werror -std=c++98 -g
 RM				= rm -rf
 MKDIR			= mkdir -p
 ECHO			= echo
@@ -24,7 +24,7 @@ RESET   = \033[0m
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	@$(CC) $(OBJS) -o $(NAME)
+	@$(CC) $(INC) $(OBJS) -o $(NAME)
 	@$(ECHO) "$(BLUE)Compilation completed$(RESET)"
 
 
@@ -38,6 +38,7 @@ clean:
 	@$(ECHO) "$(LPINK)Objects removed successfully$(RESET)"
 
 fclean: clean
+	@$(RM) $(NAME) $(OBJS_DIR) *.replace
 	@$(RM) $(NAME) $(OBJS_DIR)
 	@$(ECHO) "$(PINK)Program removed successfully$(RESET)"
 

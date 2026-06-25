@@ -1,4 +1,4 @@
-#include "Sed.hpp"
+#include "inc/Sed.hpp"
 
 int	main(int ac, char **av)
 {
@@ -9,5 +9,5 @@ int	main(int ac, char **av)
 	}
 
 	sed(av[1], av[2], av[3]);
-
+	return (0);
 }
