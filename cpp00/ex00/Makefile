@@ -9,40 +9,36 @@ RM				= rm -rf
 MKDIR			= mkdir -p
 ECHO			= echo
 
-GREEN   = \033[38;5;108m
-BLUE    = \033[38;5;110m
-BROWN   = \033[38;5;137m
-YELLOW   = \033[38;5;221m
 
-B_GREEN  = \033[1;38;5;108m
-B_BLUE   = \033[1;38;5;110m
-B_BROWN  = \033[1;38;5;137m
-B_YELLOW = \033[1;38;5;180m
-
-RESET   = \033[0m
+BLUE			= \033[38;2;78;76;118m
+PURPLE		= \033[38;2;144;133;188m
+LPINK			= \033[38;2;242;203;224m
+PINK			= \033[38;2;203;109;154m
+DPINK			= \033[38;2;143;71;123m
+RES				= \033[0m
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
 	@$(CC) $(OBJS) -o $(NAME)
-	@$(ECHO) "$(GREEN)Compilation $(B_GREEN)completed$(RESET)"
+	@$(ECHO) "$(LPINK)Compilation completed$(RES)"
 
 
 $(OBJS_DIR)/%.o: %.cpp
 	@$(MKDIR) $(dir $@)
 	@$(CC) -c $< -o $@
-	@$(ECHO) "$(YELLOW)Compiling...$(RESET)"
+	@$(ECHO) "$(BLUE)Compiling...$(RES)"
 
 clean:
 	@$(RM) $(OBJS)
-	@$(ECHO) "$(BLUE)Objects removed $(B_BLUE)successfully$(RESET)"
+	@$(ECHO) "$(PURPLE)Objects removed successfully$(RES)"
 
 fclean: clean
 	@$(RM) $(NAME) $(OBJS_DIR)
-	@$(ECHO) "$(BROWN)Program removed $(B_BROWN)successfully$(RESET)"
+	@$(ECHO) "$(PINK)Program removed successfully$(RES)"
 
 re: fclean all
-	@$(ECHO) "$(BLUE)Re-compile was $(B_BLUE)successful$(RESET)"
+	@$(ECHO) "$(DPINK)Re-compile was successful$(RES)"
 
 .PHONY: all clean fclean re
 
