@@ -24,20 +24,19 @@ void sed(std::string filename, std::string s1, std::string s2) {
     return;
   }
   std::string str;
-	while (std::getline(file, str)){
-		std::string res;
-		size_t	i = 0;
-		size_t	found = str.find(s1, i);
-		while (found != std::string::npos)
-		{
-			res += str.substr(i, found - i);
-			res += s2;
-			i = found + s1.length();
-			found = str.find(s1, i);
-		}
-		res += str.substr(i);
-		newFile << res << std::endl;
-	}
-	file.close();
-	newFile.close();
+  while (std::getline(file, str)) {
+    std::string res;
+    size_t i = 0;
+    size_t found = str.find(s1, i);
+    while (found != std::string::npos) {
+      res += str.substr(i, found - i);
+      res += s2;
+      i = found + s1.length();
+      found = str.find(s1, i);
+    }
+    res += str.substr(i);
+    newFile << res << std::endl;
+  }
+  file.close();
+  newFile.close();
 }
