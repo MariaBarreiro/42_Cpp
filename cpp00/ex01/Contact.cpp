@@ -1,5 +1,5 @@
-#include "inc/Contact.hpp"
-#include "inc/PhoneBook.hpp"
+#include "Contact.hpp"
+#include "PhoneBook.hpp"
 
 Contact::Contact() {}
 

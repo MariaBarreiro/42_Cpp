@@ -1,6 +1,6 @@
 NAME			= PhoneBook
 
-INC_PATH	= ./inc/
+INC_PATH	= .
 
 SRC				= main.cpp
 SRC				+= Contact.cpp

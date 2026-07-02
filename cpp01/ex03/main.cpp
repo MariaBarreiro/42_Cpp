@@ -1,5 +1,5 @@
-#include "inc/HumanA.hpp"
-#include "inc/HumanB.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 
 int main() {
   {

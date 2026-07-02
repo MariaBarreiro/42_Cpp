@@ -3,7 +3,7 @@ NAME			= Harl
 SRC				= main.cpp
 SRC				+= Harl.cpp
 
-INC_PATH = ./inc/
+INC_PATH = .
 
 OBJS_DIR	= obj
 OBJS			= $(addprefix $(OBJS_DIR)/,$(SRC:.cpp=.o))

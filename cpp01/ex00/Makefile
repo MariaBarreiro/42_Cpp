@@ -1,6 +1,6 @@
 NAME			= Zombie
 
-INC_PATH	= ./inc/
+INC_PATH	= .
 
 SRC				= main.cpp
 SRC				+= Zombie.cpp

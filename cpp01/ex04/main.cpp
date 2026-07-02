@@ -1,4 +1,4 @@
-#include "inc/Sed.hpp"
+#include "Sed.hpp"
 
 int main(int ac, char **av) {
   if (ac != 4) {

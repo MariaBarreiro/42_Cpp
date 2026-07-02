@@ -5,7 +5,7 @@ SRC				+= Weapon.cpp
 SRC				+= HumanB.cpp
 SRC				+= HumanA.cpp
 
-INC_PATH	= ./inc/
+INC_PATH	= .
 
 OBJS_DIR	= obj
 OBJS			= $(addprefix $(OBJS_DIR)/,$(SRC:.cpp=.o))

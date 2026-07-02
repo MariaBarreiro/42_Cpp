@@ -1,4 +1,4 @@
-#include "inc/Sed.hpp"
+#include "Sed.hpp"
 #include <fstream>
 #include <string>
 

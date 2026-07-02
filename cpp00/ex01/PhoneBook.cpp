@@ -1,4 +1,4 @@
-#include "inc/PhoneBook.hpp"
+#include "PhoneBook.hpp"
 #include <string>
 
 PhoneBook::PhoneBook() { this->_contactsCount = 0; }
