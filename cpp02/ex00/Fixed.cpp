@@ -7,10 +7,7 @@ Fixed::Fixed() : _value(0) {
 Fixed::~Fixed(){
 	std::cout << DPINK "Destructor called" RES << std::endl;
 }
-/*
-Fixed::Fixed(const Fixed &other) : _value(other._value){
-	std::cout << LPINK "Copy constructor called" RES << std::endl;
-}*/
+
 Fixed::Fixed(const Fixed &other){
  	std::cout << LPINK "Copy constructor called" RES << std::endl;
  	this->_value = other.getRawBits();;
