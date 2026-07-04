@@ -18,14 +18,14 @@ ClapTrap::~ClapTrap() {
 }
 
 ClapTrap::ClapTrap(const ClapTrap &other) {
-  std::cout << LPINK "Copy constructor called." RES << std::endl;
+  std::cout << LPINK "ClapTrap copy constructor called." RES << std::endl;
   *this = other;
   std::cout << LPINK "ClapTrap " << this->_name << " was created." RES
             << std::endl;
 }
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &other) {
-  std::cout << PINK "Copy assignment operator called." RES << std::endl;
+  std::cout << LPINK "ClapTrap copy assignment operator called." RES << std::endl;
   if (this != &other) {
     this->_name = other._name;
     this->_hitPoints = other._hitPoints;
