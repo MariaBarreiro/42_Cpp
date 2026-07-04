@@ -2,6 +2,9 @@
 #include "ClapTrap.hpp"
 
 ScavTrap::ScavTrap() : ClapTrap() {
+  this->_hitPoints = 100;
+  this->_energyPoints = 50;
+  this->_attackDamage = 20;
   std::cout << LPINK "ScavTrap default constructor called." RES << std::endl;
 }
 
@@ -59,6 +62,11 @@ void ScavTrap::attack(const std::string &target) {
 }
 
 void	ScavTrap::guardGate() {
-	std::cout << BLUE "ScavTrap " << this->_name << " is now in Gate keeper mode." RES << std::endl;
+	if (this->_hitPoints > 0){
+		std::cout << BLUE "ScavTrap " << this->_name << " is now in Gate keeper mode." RES << std::endl;
+		return ;
+	}
+	std::cout << DPINK "ScavTrap " << this->_name << "has no health to guard the gate." RES << std::endl; 
 	return ;
 }
+

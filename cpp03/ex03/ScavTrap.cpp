@@ -9,11 +9,11 @@ ScavTrap::ScavTrap() : ClapTrap() {
 }
 
 ScavTrap::ScavTrap(const std::string &name) : ClapTrap(name) {
-  std::cout << LPINK "ScavTrap " << this->_name << " was created." RES
-            << std::endl;
   this->_hitPoints = 100;
   this->_energyPoints = 50;
   this->_attackDamage = 20;
+  std::cout << LPINK "ScavTrap " << this->_name << " was created." RES
+            << std::endl;
 }
 
 ScavTrap::~ScavTrap() {
@@ -69,4 +69,3 @@ void	ScavTrap::guardGate() {
 	std::cout << DPINK "ScavTrap " << this->_name << "has no health to guard the gate." RES << std::endl; 
 	return ;
 }
-
