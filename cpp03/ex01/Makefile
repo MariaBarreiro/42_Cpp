@@ -1,7 +1,8 @@
-NAME			= ClapTrap
+NAME			= ScavTrap
 
 SRC				= main.cpp
 SRC				+= ClapTrap.cpp
+SRC				+= ScavTrap.cpp
 
 INC_PATH	= .
 

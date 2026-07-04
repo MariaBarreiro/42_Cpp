@@ -44,7 +44,5 @@ int main(void)
     alice.beRepaired(5);
     alice.takeDamage(1);
 
-    std::cout << "\n========== END OF PROGRAM ==========\n";
-
     return (0);
 }
