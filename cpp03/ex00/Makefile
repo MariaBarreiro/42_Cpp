@@ -1,7 +1,7 @@
-NAME			= Fixed
+NAME			= ClapTrap
 
 SRC				= main.cpp
-SRC				+= Fixed.cpp
+SRC				+= ClapTrap.cpp
 
 INC_PATH	= .
 
