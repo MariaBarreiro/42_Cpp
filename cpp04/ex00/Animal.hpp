@@ -16,12 +16,22 @@ protected:
 
 public:
   Animal();
+<<<<<<< HEAD
   Animal(const Animal &other);
   Animal &operator=(const Animal &other);
   virtual ~Animal();
 
 	std::string const& getType() const;
 	virtual void	makeSound() const;
+=======
+  Animal(const std::string &type);
+  Animal(const Animal &other);
+  Animal &operator=(const Animal &other);
+  ~Animal()
+
+	void	makeSound();
+
+>>>>>>> 329488f79d93a5535b0cd7aa6910a5032603d0b2
 };
 
 #endif
