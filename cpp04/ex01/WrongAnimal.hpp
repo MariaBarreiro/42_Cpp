@@ -1,5 +1,5 @@
-#ifndef ANIMAL_HPP
-#define ANIMAL_HPP
+#ifndef WRONGANIMAL_HPP
+#define WRONGANIMAL_HPP
 
 #include <iostream>
 
@@ -10,18 +10,18 @@
 #define DPINK "\033[38;2;143;71;123m"
 #define RES "\033[0m"
 
-class Animal {
+class WrongAnimal {
 protected:
   std::string _type;
 
 public:
-  Animal();
-  Animal(const Animal &other);
-  Animal &operator=(const Animal &other);
-  virtual ~Animal();
+  WrongAnimal();
+  WrongAnimal(const WrongAnimal &other);
+  WrongAnimal &operator=(const WrongAnimal &other);
+  ~WrongAnimal();
 
 	std::string const& getType() const;
-	virtual void	makeSound() const;
+	void	makeSound() const;
 };
 
 #endif
