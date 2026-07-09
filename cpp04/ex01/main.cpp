@@ -10,7 +10,6 @@ int main(void)
 {
     std::cout << "\n========================================\n";
     std::cout << "TEST 1 - POLYMORPHISM";
-    std::cout << "\n========================================\n\n";
 
     const Animal* dog = new Dog();
     const Animal* cat = new Cat();
@@ -27,7 +26,6 @@ int main(void)
 
     std::cout << "\n========================================\n";
     std::cout << "TEST 2 - ARRAY OF ANIMALS";
-    std::cout << "\n========================================\n\n";
 
     Animal* animals[10];
 
@@ -37,8 +35,6 @@ int main(void)
     for (int i = 5; i < 10; i++)
         animals[i] = new Cat();
 
-    std::cout << "\nDeleting every Animal through an Animal*" << std::endl;
-    std::cout << "(Dog/Cat destructors should be called first)\n" << std::endl;
 
     for (int i = 0; i < 10; i++)
         delete animals[i];
@@ -46,7 +42,6 @@ int main(void)
 
     std::cout << "\n========================================\n";
     std::cout << "TEST 3 - COPY CONSTRUCTOR";
-    std::cout << "\n========================================\n\n";
 
     Dog basicDog;
 
