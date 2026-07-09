@@ -16,10 +16,13 @@ protected:
 
 public:
   Animal();
-  Animal(const std::string &name);
+  Animal(const std::string &type);
   Animal(const Animal &other);
   Animal &operator=(const Animal &other);
-  ~Animal();
+  ~Animal()
+
+	void	makeSound();
+
 };
 
 #endif
